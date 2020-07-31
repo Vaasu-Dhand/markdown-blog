@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/litera/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{
+      background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    }
+    .card-body {
+      background-image: linear-gradient(-225deg, #fcfab1 0%, #b7f3f2 100%);
+    }
+  </style>
+  <title>Blog</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4">
+      New Article
+    </h1>
+
+    <form action="/articles" method="POST">
+      <%- include('_form_fields') %>
+    </form>
+  </div> 
+</body>
+</html>
