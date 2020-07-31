@@ -4,7 +4,7 @@ const articleRouter = require("./routes/articles");
 const Article = require("./models/article");
 const methodOverride = require('method-override')
 
-require("dotenv").config();
+// require("dotenv").config();
 
 const app = express();
 const db = process.env.MongoURI;
