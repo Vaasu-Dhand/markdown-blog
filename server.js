@@ -3,8 +3,10 @@ const mongoose = require("mongoose");
 const articleRouter = require("./routes/articles");
 const Article = require("./models/article");
 const methodOverride = require('method-override')
+const favicon = require('serve-favicon');
+const path = require('path')
 
-// require("dotenv").config();
+require("dotenv").config();
 
 const app = express();
 const db = process.env.MongoURI;
@@ -12,6 +14,8 @@ const db = process.env.MongoURI;
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
+
+app.use(favicon(path.join(__dirname, 'favicon.png')));
 
 app.get("/", async (req, res) => {
   const articles = await Article.find().sort({
